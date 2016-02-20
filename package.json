@@ -1,0 +1,19 @@
+{
+  "name": "what-it-bash",
+  "private": true,
+  "scripts": {
+    "start": "static-server",
+    "deps": "bower install",
+    "build": "./build.sh",
+    "pages": "gh-pages -d .deploy -m \"Updated at $(date +'%a, %d %b %Y, %T, %Z')\" --add",
+    "deploy": "npm-run-all deps build pages"
+  },
+  "devDependencies": {
+    "bower": "~0.9.2",
+    "npm-run-all": "^1.5.1",
+    "static-server": "^2.0.1"
+  },
+  "engines": {
+    "node": ">=0.12.0"
+  }
+}
