@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-DIST=".deploy"
+DIST="dist"
 
 # Clean dist
 [ -d "$DIST" ] && rm -rf "$DIST"

@@ -5,12 +5,12 @@
     "start": "static-server",
     "deps": "bower install",
     "build": "./build.sh",
-    "pages": "gh-pages -d .deploy -m \"Updated at $(date +'%a, %d %b %Y, %T, %Z')\" --add",
-    "deploy": "npm-run-all deps build pages"
+    "pages": "gh-pages -d dist -m \"Updated at $(date +'%a, %d %b %Y, %T, %Z')\" --add",
+    "deploy": "npm run deps && npm run build && npm run pages"
   },
   "devDependencies": {
-    "bower": "~0.9.2",
-    "npm-run-all": "^1.5.1",
+    "bower": "^1.7.7",
+    "gh-pages": "^0.8.0",
     "static-server": "^2.0.1"
   },
   "engines": {
