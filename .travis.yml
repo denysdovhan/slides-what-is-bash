@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+- v5
+branches:
+  only: master
+before_install:
+  - chmod +x ./build.sh
+before_script:
+- git config --global user.email "email@denysdovhan.com"
+- git config --global user.name "Travis Builder"
+- git remote rm origin
+- git remote add origin https://denysdovhan:${GH_TOKEN}@github.com/denysdovhan/understandinges6ua.git
+script:
+- npm run deploy
+env:
+  global:
+    secure: RUxhwS7kOJ2r2R6nqnCURuqI+s5pF+djiHLtdSTPLHmxElngWLlsvs1LRVVEgI0KU0Ld2ac7QKxfY4/zIOhHONQUPiaFaSOE6QlqREBCvXrZh7XOFjSGe0J1tRzYobRTlTmzNmE9Muzn1vsPtppYYsgrP7j6M5mULVVm0v41DdIgqIJ3dtc+1kCwAyVXVtH1LiLuynToiZfB6SUlrL7H17ulKWEDwUoVHN6x6ioF5u9ZNy7yUF4c49JCCi45cHb92TmYYZp1OlGjTsoNdqQqIPOsqBbWp6BVeLbeg2ITC5qFIEI6O1RWbJNqP8C/GBE5gp4+IA+8LFAN7DE7Zdheh00nvczlZFRL8W+hQIMo8svYjONR+jgOjrqMmH1K9pt4gy1AXGq8GDgpIiByLkt1P/cwC11rd6OFc47wzX8jrmFN3JGU7yO7HOdQO3dK/D4ODAJ6fOqIOF+BstpiPNIztTnXnVYWf8h1J4rBKjq/MTXrDvLTRwH4KUbxWj43Da0Apc44LVc8ESW+HZXugquhYQH4WNLZHuOSIjwPDadnFOCsSw0AZfLcHZkSntm8Ih0DT4N3RkttwIr9Q3xU4qiUBe1SiW7Q/+0gIaxGBpWTQASuNx4ThYQ5OyStEZjupZviWmmv7iDZY2oyzVzagbfClfPVWtZvyTrg/qAfuzQ35q0=
