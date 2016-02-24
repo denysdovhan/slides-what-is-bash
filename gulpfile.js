@@ -2,6 +2,7 @@ const gulp         = require('gulp');
 const bower        = require('gulp-bower');
 const postcss      = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
+const nested       = require('postcss-nested');
 const imagemin     = require('gulp-imagemin');
 const deploy       = require('gulp-gh-pages');
 const express      = require('express');
@@ -17,7 +18,8 @@ gulp.task('bower', () =>
 gulp.task('styles', () =>
   gulp.src('styles/**/*.css')
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(),
+      nested()
     ]))
     .pipe(gulp.dest('dist/styles'))
 );
