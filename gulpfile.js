@@ -44,6 +44,8 @@ gulp.task('build', ['bower', 'styles', 'fonts', 'images', 'layout']);
 
 gulp.task('watch', ['build', 'server'], () => {
   gulp.watch(['styles/**/*'], ['styles']);
+  gulp.watch(['fonts/**/*'], ['fonts']);
+  gulp.watch(['images/**/*'], ['images']);
   gulp.watch(['./index.html'], ['layout']);
 });
 
