@@ -3,8 +3,6 @@ node_js:
 - v5
 branches:
   only: master
-before_install:
-  - chmod +x ./build.sh
 before_script:
 - git config --global user.email "email@denysdovhan.com"
 - git config --global user.name "Travis Builder"
