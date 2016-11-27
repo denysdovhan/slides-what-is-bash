@@ -13,5 +13,9 @@ There are few gulp tasks:
 
 The tasks work for `npm` as well.
 
+## License
+
+MIT © [Denys Dovhan](http://denysdovhan.com)
+
 [travis-url]: https://travis-ci.org/denysdovhan/slides-what-is-bash
 [travis-image]: https://img.shields.io/travis/denysdovhan/slides-what-is-bash.svg?style=flat-square
